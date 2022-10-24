@@ -37,9 +37,9 @@ public class ProductService {
      */
     @Transactional
     public Product createUpdateNewProduct(ProductDTO productDTO, Boolean isUpdate) {
-        if (StringUtils.isEmpty(productDTO.getName())) {
-            log.warn("Name is empty!, throwing IllegalArgumentException");
-            throw new IllegalArgumentException("Name is required!");
+        if (StringUtils.isEmpty(productDTO.getName()) || StringUtils.isEmpty(productDTO.getDescription())) {
+            log.warn("Name/desc is empty!, throwing IllegalArgumentException");
+            throw new IllegalArgumentException("Name and description is required!");
         }
         if (productDTO.getCategoryIdList() == null || productDTO.getCategoryIdList().isEmpty()) {
             log.warn("Category is empty!, throwing IllegalArgumentException");
@@ -47,7 +47,7 @@ public class ProductService {
         }
         if (isUpdate && (productDTO.getId() == null || productDTO.getId().equals(0L))) {
             log.warn("product ID is null!, throwing IllegalArgumentException");
-            throw new IllegalArgumentException("ID is required!");
+            throw new IllegalArgumentException("ID is required to update product!");
         }
         Product product;
         List<ProductCategory> productCategoryList = new ArrayList<>();
