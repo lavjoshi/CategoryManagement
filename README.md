@@ -11,7 +11,7 @@ Pre-requisite:
 To start the application do the following:
 
 1. Open a terminal and cd to the root directory for this project
-2. `mvn package` to create a jar
+2. `mvn package -DskipTests` to create a jar
 3. run `docker-compose up` (To run as daemon `docker-compose up -d`)
 
 The application will be available to at `http://localhost:8080/`
