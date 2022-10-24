@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 import java.util.Set;
 
-public interface ProductCategoryRepositoryImpl extends JpaRepository<ProductCategory,Long> {
+public interface ProductCategoryRepositoryImpl extends JpaRepository<ProductCategory, Long> {
 
     @Query("select p from ProductCategory p where p.categoryId in ?1")
     Set<ProductCategory> findAllByCategoryId(Set<Long> ids);

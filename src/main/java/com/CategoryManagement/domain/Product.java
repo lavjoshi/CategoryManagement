@@ -9,7 +9,8 @@ import java.util.List;
 @Entity
 @Table(name = "product")
 @Builder
-@Setter@Getter
+@Setter
+@Getter
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor

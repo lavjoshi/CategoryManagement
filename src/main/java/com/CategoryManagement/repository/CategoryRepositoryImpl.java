@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Set;
 
 @Repository
-public interface CategoryRepositoryImpl extends JpaRepository<Category,Long> {
+public interface CategoryRepositoryImpl extends JpaRepository<Category, Long> {
 
 
     Category findByName(String name);

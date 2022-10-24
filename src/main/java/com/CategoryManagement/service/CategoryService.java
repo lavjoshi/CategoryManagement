@@ -34,6 +34,7 @@ public class CategoryService {
 
     /**
      * Add a new category with it's parent. If Parent is null, MAIN_CATEGORY is the default parent.
+     *
      * @param categoryDTO request body with category name and parent
      * @return CategoryResponseDTO with category path
      */
@@ -82,6 +83,7 @@ public class CategoryService {
 
     /**
      * Check with a category has no child
+     *
      * @param name category to check
      * @return True/False
      */
@@ -95,6 +97,7 @@ public class CategoryService {
 
     /**
      * Return category by name
+     *
      * @param name Name of category
      * @return CategoryResponseDTO with path
      */
@@ -110,6 +113,7 @@ public class CategoryService {
 
     /**
      * Returns category path from root
+     *
      * @param id Category ID
      * @return Path as String
      */
@@ -120,7 +124,8 @@ public class CategoryService {
 
     /**
      * Update category name
-     * @param name Old name
+     *
+     * @param name        Old name
      * @param updatedName New name
      * @return ResponseDTO with error flag and message
      */
@@ -147,6 +152,7 @@ public class CategoryService {
     /**
      * Delete a category by ID if no products are mapped to that category or category's child.
      * Deleting a category will also delete its child categories.
+     *
      * @param id Category ID
      * @return ResponseDTO with error flag and message
      */
@@ -181,6 +187,7 @@ public class CategoryService {
 
     /**
      * Fetch all categories in DB
+     *
      * @return List of Categories
      */
     public List<CategoryResponseDTO> getAllCategories() {

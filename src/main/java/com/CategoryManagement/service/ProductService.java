@@ -31,8 +31,9 @@ public class ProductService {
 
     /**
      * Save or update a product with its product category
+     *
      * @param productDTO request body
-     * @param isUpdate flag to insert or update
+     * @param isUpdate   flag to insert or update
      * @return Product with categories
      */
     @Transactional
@@ -99,8 +100,9 @@ public class ProductService {
     /**
      * Get all product for a given category.
      * If recursive is True, include products from category's child as well.
+     *
      * @param categoryID category
-     * @param recursive flag to fetch child of a category
+     * @param recursive  flag to fetch child of a category
      * @return List of Product
      */
     public Set<Product> getProductByCategory(Long categoryID, Boolean recursive) {
@@ -128,8 +130,9 @@ public class ProductService {
 
     /**
      * Update Product isActive flag
+     *
      * @param productId ID of product to update
-     * @param status value of flag
+     * @param status    value of flag
      * @return Product with categories
      */
     public Product updateProductStatus(Long productId, Boolean status) {
@@ -155,12 +158,13 @@ public class ProductService {
 
     /**
      * Deletes product and product category mapping for given product IDs
+     *
      * @param productIDs IDs of product to delete
      * @return ResponseDTO with message and error flag
      */
     public ResponseDTO deleteProduct(List<Long> productIDs) {
         List<Product> productList = productRepository.findAllById(productIDs);
-        if(productList.isEmpty()){
+        if (productList.isEmpty()) {
             log.warn("productId is empty!, throwing NoSuchElementException");
             throw new NoSuchElementException("No product(s) found for given ID(s)!");
         }

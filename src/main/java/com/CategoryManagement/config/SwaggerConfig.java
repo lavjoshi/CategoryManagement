@@ -26,6 +26,7 @@ public class SwaggerConfig {
     }
 
     private ApiInfo apiInfo() {
-        return new ApiInfo("Category & Product Management", "We are trying to manage categories using nested sets", "1.0", "", null, "API License open", "N/A", Collections.emptyList());
+        return new ApiInfo("Category & Product Management", "We are trying to manage categories using nested sets",
+                "1.0", "", null, "API License open", "N/A", Collections.emptyList());
     }
 }

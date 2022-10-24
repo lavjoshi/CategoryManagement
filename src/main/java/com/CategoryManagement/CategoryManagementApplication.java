@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @EnableAutoConfiguration
 public class CategoryManagementApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CategoryManagementApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(CategoryManagementApplication.class, args);
+    }
 
 }
