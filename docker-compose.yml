@@ -1,0 +1,26 @@
+
+
+version: '3.1'
+services:
+  app:
+    container_name: category_mgmt
+    image: category_mgmt
+    build: ./
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgresDB
+    environment:
+      - DATABASE_PASSWORD=1234
+      - DATABASE_USER=postgres
+      - DATABASE_URL=jdbc:postgresql://postgresDB:5432/category_mgmt
+      - MAIN_CATEGORY=TV_&_Audio
+
+  postgresDB:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=category_mgmt
