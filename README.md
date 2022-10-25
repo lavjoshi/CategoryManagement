@@ -4,9 +4,9 @@ CategoryManagement using nested set.
 
 Pre-requisite:
 
-<li>docker and docker-compose should be available and docker daemon running
+<li>docker, docker-compose and maven should be available with docker daemon running
 <li>Please make sure no other app is running on port 8080 and 5432.</li>
-<li> Active internet connection required to download dependencies like JDK and Postgres. </li>
+<li>Active internet connection required to download dependencies like JDK and Postgres. </li>
 
 To start the application do the following:
 
@@ -14,7 +14,7 @@ To start the application do the following:
 2. `mvn package -DskipTests` to create a jar
 3. run `docker-compose up` (To run as daemon `docker-compose up -d`)
 
-The application will be available to at `http://localhost:8080/`
+The application will be available at `http://localhost:8080/`
 
 API details can be found using swagger UI at `http://localhost:8080/swagger-ui.html#`
 

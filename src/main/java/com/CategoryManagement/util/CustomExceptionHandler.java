@@ -23,7 +23,7 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ResponseBody
     public ResponseEntity<ResponseDTO> handleException(IllegalArgumentException exception) {
-        log.error("Constraint violation ", exception);
+        log.error("Bad Request ", exception);
         ResponseDTO responseDTO = ResponseDTO.builder().isError(Boolean.TRUE).message(exception.getMessage()).build();
         return new ResponseEntity<>(responseDTO, HttpStatus.BAD_REQUEST);
     }
