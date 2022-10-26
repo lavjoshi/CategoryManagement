@@ -13,5 +13,6 @@ public class CategoryDTO {
 
     @ApiModelProperty(notes = "Category name, should be unique.")
     String name;
+    @ApiModelProperty(notes = "Parent category name, can be null.")
     String parent;
 }
